@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+.Home-Button {
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 0 2px 3px #ccc;
+  cursor: pointer;
+}
