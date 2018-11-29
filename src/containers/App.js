@@ -21,11 +21,12 @@ class App extends Component {
     const personIndex = this.state.persons.findIndex(p => p.userId === id);
     const person = { ...this.state.persons[personIndex] };
     person.name = event.target.value;
+    
 
     const persons = [...this.state.persons];
     persons[personIndex] = person;
     this.setState({ persons: persons });
-    
+    console.log(this.state.persons);
   }
 
   togglePersonsHandler = () => {
@@ -53,7 +54,7 @@ class App extends Component {
       persons = <Persons 
             persons={this.state.persons}
             clicked={this.deletePersonHandler}
-            changed={this.nameChangeHandler}
+            change={this.nameChangeHandler}
           />
     }
 
