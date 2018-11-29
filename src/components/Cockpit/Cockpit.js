@@ -1,20 +1,20 @@
 import React from 'react';
-import styles from './Cockpit.css'
+import classes from './Cockpit.css'
 import Aux from '../../hoc/Aux';
 
 const cockpit = (props) => {
 
     let assignedClasses = [];
-    let btnClass = styles.Button;
+    let btnClass = classes.Button;
 
     if(props.persons.length < 2) {
-      assignedClasses.push( styles.red )
+      assignedClasses.push( classes.red )
     }
     if (props.persons.length < 1) {
-      assignedClasses.push( styles.bold )
+      assignedClasses.push( classes.bold )
     }
     if (props.showPersons) {
-        btnClass = [styles.Button, styles.Red].join(" ");
+        btnClass = [classes.Button, classes.Red].join(" ");
     }
 
     return(
